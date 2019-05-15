@@ -201,7 +201,7 @@ module.exports = function (params) {
                             result.map = JSON.parse(result.map);
                         }
 
-                        if (result.map.mappings && result.map.mappings.length > 0) {
+                        if (false && result.map.mappings && result.map.mappings.length > 0) {
                             var resultMap = new SourceMapConsumer(result.map);
                             resultMap.eachMapping(function (mapping) {
                                 if (!mapping.source) return;
