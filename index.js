@@ -196,12 +196,12 @@ module.exports = function (params) {
                 if (sourceMap) {
                     var lines = resultContent.match(/^/mg).length; //count lines in result
 
-                    if (result.map) { // result had a map, merge mappings
+                    if (false && result.map) { // result had a map, merge mappings
                         if (Object.prototype.toString.call(result.map) === '[object String]') {
                             result.map = JSON.parse(result.map);
                         }
 
-                        if (false && result.map.mappings && result.map.mappings.length > 0) {
+                        if (result.map.mappings && result.map.mappings.length > 0) {
                             var resultMap = new SourceMapConsumer(result.map);
                             resultMap.eachMapping(function (mapping) {
                                 if (!mapping.source) return;
